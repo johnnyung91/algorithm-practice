@@ -6,19 +6,16 @@ function isLucky(n) {
   let firstTotal = 0;
   let secondTotal = 0;
   const string = n.toString();
-  const firstHalf = string.slice(0, string.length/2)
-  const secondhalf = string.slice(string.length/2 - string.length)
+  const firstHalf = string.slice(0, string.length/2).split('')
+  const secondHalf = string.slice(string.length/2 - string.length).split('')
 
-  const firstArray = firstHalf.split('')
-  const secondArray = secondhalf.split('')
-
-  for (let i = 0; i < firstArray.length; i++) {
-    let number = Number(firstArray[i])
+  for (let i = 0; i < firstHalf.length; i++) {
+    let number = Number(firstHalf[i])
     firstTotal = firstTotal + number
   }
 
-  for (let j = 0; j < secondArray.length; j++) {
-    let number = Number(secondArray[j])
+  for (let j = 0; j < secondHalf.length; j++) {
+    let number = Number(secondHalf[j])
     secondTotal = secondTotal + number
   }
 
