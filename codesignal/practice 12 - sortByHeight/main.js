@@ -14,3 +14,4 @@ function sortByHeight(a) {
   const people = a.filter(x => x >= 0).sort((a, b) => a - b)
   return a.map(value => value < 0 ? -1 : people.shift())
 }
+*/
