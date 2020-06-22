@@ -5,34 +5,34 @@ function minesweeper(matrix) {
     for (let c = 0; c < matrix[r].length; c++) {
       let sum = 0;
       //left check
-      if (matrix[r][c - 1] === true) {
+      if (matrix[r][c - 1]) {
         sum++;
       }
       //right check
-      if (matrix[r][c + 1] === true) {
+      if (matrix[r][c + 1]) {
         sum++;
       }
       //above checks
-      if (matrix[r - 1] !== undefined) {
-        if (matrix[r - 1][c] === true) {
+      if (matrix[r - 1]) {
+        if (matrix[r - 1][c]) {
           sum++;
         }
-        if (matrix[r - 1][c - 1] === true) {
+        if (matrix[r - 1][c - 1]) {
           sum++;
         }
-        if (matrix[r - 1][c + 1] === true) {
+        if (matrix[r - 1][c + 1]) {
           sum++;
         }
       }
       //below checks
-      if (matrix[r + 1] !== undefined) {
-        if (matrix[r + 1][c] === true) {
+      if (matrix[r + 1]) {
+        if (matrix[r + 1][c]) {
           sum++;
         }
-        if (matrix[r + 1][c - 1] === true) {
+        if (matrix[r + 1][c - 1]) {
           sum++;
         }
-        if (matrix[r + 1][c + 1] === true) {
+        if (matrix[r + 1][c + 1]) {
           sum++;
         }
       }
