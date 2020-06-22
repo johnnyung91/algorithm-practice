@@ -14,27 +14,15 @@ function minesweeper(matrix) {
       }
       //above checks
       if (matrix[r - 1]) {
-        if (matrix[r - 1][c]) {
-          sum++;
-        }
-        if (matrix[r - 1][c - 1]) {
-          sum++;
-        }
-        if (matrix[r - 1][c + 1]) {
-          sum++;
-        }
+        if (matrix[r - 1][c]) sum++;
+        if (matrix[r - 1][c - 1]) sum++;
+        if (matrix[r - 1][c + 1]) sum++;
       }
       //below checks
       if (matrix[r + 1]) {
-        if (matrix[r + 1][c]) {
-          sum++;
-        }
-        if (matrix[r + 1][c - 1]) {
-          sum++;
-        }
-        if (matrix[r + 1][c + 1]) {
-          sum++;
-        }
+        if (matrix[r + 1][c]) sum++;
+        if (matrix[r + 1][c - 1]) sum++;
+        if (matrix[r + 1][c + 1]) sum++;
       }
       newLine.push(sum);
     }
