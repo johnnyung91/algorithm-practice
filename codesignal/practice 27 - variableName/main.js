@@ -5,6 +5,7 @@ function variableName(name) {
 
   if (numbers.includes(lowercase[0])) return false
 
+  debugger
   for (let i = 0; i < lowercase.length; i++ ) {
       const current = lowercase[i]
       if (!letters.includes(current) && !numbers.includes(current)) return false
