@@ -40,3 +40,5 @@ function canPass(inputArray, num) {
     }
     return true;
 }
+
+*/
