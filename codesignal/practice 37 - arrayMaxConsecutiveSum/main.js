@@ -12,3 +12,9 @@ function arrayMaxConsecutiveSum(inputArray, k) {
   }
   return max
 }
+
+/* Other solutions
+
+
+
+*/
