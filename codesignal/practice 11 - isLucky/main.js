@@ -1,25 +1,16 @@
 function isLucky(n) {
-//turn n into a string - done
-//divide the string into two equal parts (n.length/2) - done
-//turn each half into an array (0 - n.length/2 -1) and (n.length/2 - n.length - 1) - done
-//turn each 'string' back to a 'number' add the sums of each array and check to see if they are equal to each other
-  let firstTotal = 0;
-  let secondTotal = 0;
+  //turn n into a string - done
+  //divide the string into two equal parts (n.length/2) - done
+  //turn each half into an array (0 - n.length/2 -1) and (n.length/2 - n.length - 1) - done
+  //turn each 'string' back to a 'number' add the sums of each array and check to see if they are equal to each other
   const string = n.toString();
-  const firstHalf = string.slice(0, string.length/2).split('')
-  const secondHalf = string.slice(string.length/2 - string.length).split('')
+  const firstHalf = string.slice(0, string.length / 2).split("");
+  const secondHalf = string.slice(string.length / 2 - string.length).split("");
 
-  for (let i = 0; i < firstHalf.length; i++) {
-    let number = Number(firstHalf[i])
-    firstTotal = firstTotal + number
-  }
+  const firstTotal = firstHalf.reduce((sum, current) => sum + +current, 0);
+  const secondTotal = secondHalf.reduce((sum, current) => sum + +current, 0);
 
-  for (let j = 0; j < secondHalf.length; j++) {
-    let number = Number(secondHalf[j])
-    secondTotal = secondTotal + number
-  }
-
-  return firstTotal === secondTotal
+  return firstTotal === secondTotal;
 }
 
 /* other solutions
