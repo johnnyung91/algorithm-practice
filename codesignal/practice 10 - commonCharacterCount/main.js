@@ -4,15 +4,13 @@ function commonCharacterCount(s1, s2) {
   let s2Array = s2.split('')
 
   for (let i = 0; i < s1Array.length; i++) {
-      for (let j = 0; j < s2Array.length; j++) {
-          if (s1Array[i] === s2Array[j]) {
-              count ++;
-              s2Array.splice(j, 1);
-              break;
-          }
+      const current = s1Array[i]
+      const s2Index = s2Array.indexOf(current)
+      if (s2Index !== -1) {
+          count++
+          s2Array.splice(s2Index, 1)
       }
   }
-
   return count;
 }
 
